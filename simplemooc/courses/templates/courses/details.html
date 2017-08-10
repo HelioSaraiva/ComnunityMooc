@@ -7,10 +7,10 @@
             <div class="pure-u-1">
                 <div class="l-box splash-text">
                     <h1 class="splash-head">
-                        {{ course }}
+                        {{course}}
                     </h1>
                     <h2 class="splash-subhead">
-                        {{ course.description }}
+                        {{course.description}}
                     </h2>
                     <p>
                         <a href="{% url 'courses:enrollment' course.slug %}" class="pure-button 
@@ -25,7 +25,7 @@
             <div class="l-box">
                 <h4 class="content-subhead">Sobre o Curso</h4>
 
-                    {{ course.about|linebreaks }}
+                    {{course.about|linebreaks}}
                     
             </div>
        </div>
