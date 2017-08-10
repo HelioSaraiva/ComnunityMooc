@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="{% static 'css/pure-min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
 </head>
 <body>
 <div class="header">
-    <div class="pure-menu custom-restricted-width">
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
         <a class="pure-menu-heading" href="">Commnity</a>
         <ul>
             <li class="pure-menu-selected"><a href="{% url 'core:home' %}">Início</a></li>
@@ -29,12 +28,12 @@
     </div>
 </div>
 <div class="content">
-	{% if messages %}
+    {% if messages %}
     <div class="pure-g-r content-ribbon">
         <aside class="pure-u-1">
-        	{% for message in messages %}
+            {% for message in messages %}
             <p>{{ message }}</p>
-        	{% endfor %}
+            {% endfor %}
         </aside>
     {% endif %}
     
@@ -45,6 +44,7 @@
         Simple MOOC - Uma simples plataforma de ensino a distância
     </div>
 </div>
-<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+<script type="text/javascript" src="{% static 'yui/yui-min.js' %}"></script>
+
 </body>
 </html>
